@@ -24,7 +24,7 @@
 #include <cmath>
 #include <cfloat>
 #include <cstddef>
-#include <limits>
+#include <climits>
 
 /// This function is used to ensure that a floating point number is
 /// not a NaN or infinity.
@@ -36,7 +36,7 @@ inline bool b2IsValid(float32 x)
 		return false;
 	}
 
-	float32 infinity = std::numeric_limits<float32>::infinity();
+	float32 infinity = HUGE_VALF;//std::numeric_limits<float32>::infinity();
 	return -infinity < x && x < infinity;
 }
 

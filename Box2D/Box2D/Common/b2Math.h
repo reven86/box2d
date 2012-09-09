@@ -28,7 +28,9 @@
 
 /// This function is used to ensure that a floating point number is
 /// not a NaN or infinity.
-#define HUGE_VALF 1e+10f
+#ifndef HUGE_VALF
+#define HUGE_VALF FLT_MAX
+#endif
 inline bool b2IsValid(float32 x)
 {
 	if (x != x)

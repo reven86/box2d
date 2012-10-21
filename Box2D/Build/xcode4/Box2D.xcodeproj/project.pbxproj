@@ -141,11 +141,13 @@
 		80BB8A6C141C3E8600F1753A /* Render.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 80BB8A39141C3E8500F1753A /* Render.cpp */; };
 		80BB8A6D141C3E8600F1753A /* Test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 80BB8A3B141C3E8500F1753A /* Test.cpp */; };
 		80BB8A6E141C3E8600F1753A /* TestEntries.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 80BB8A63141C3E8600F1753A /* TestEntries.cpp */; };
-		80BB8A75141C3F4C00F1753A /* libBox2D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80FF01D2141C3D980059E59D /* libBox2D.a */; };
-		80BB8A76141C3F7600F1753A /* libBox2D.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80FF01D2141C3D980059E59D /* libBox2D.a */; };
+		80BB8A75141C3F4C00F1753A /* libbox2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80FF01D2141C3D980059E59D /* libbox2d.a */; };
+		80BB8A76141C3F7600F1753A /* libbox2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80FF01D2141C3D980059E59D /* libbox2d.a */; };
 		80BB8A77141C3F7600F1753A /* libGLUI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80BB8901141C3E1800F1753A /* libGLUI.a */; };
 		80BB8A79141C3F9C00F1753A /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80BB8A78141C3F9C00F1753A /* GLUT.framework */; };
 		80BB8A7B141C3FA700F1753A /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80BB8A7A141C3FA700F1753A /* OpenGL.framework */; };
+		EBF7F72B163435FA00F350CE /* b2MotorJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EBF7F729163435FA00F350CE /* b2MotorJoint.cpp */; };
+		EBF7F72C163435FA00F350CE /* b2MotorJoint.h in Headers */ = {isa = PBXBuildFile; fileRef = EBF7F72A163435FA00F350CE /* b2MotorJoint.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -387,7 +389,9 @@
 		80BB8A78141C3F9C00F1753A /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		80BB8A7A141C3FA700F1753A /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		80CD7722143AF3230086DB87 /* ConvexHull.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConvexHull.h; sourceTree = "<group>"; };
-		80FF01D2141C3D980059E59D /* libBox2D.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBox2D.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		80FF01D2141C3D980059E59D /* libbox2d.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libbox2d.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBF7F729163435FA00F350CE /* b2MotorJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2MotorJoint.cpp; sourceTree = "<group>"; };
+		EBF7F72A163435FA00F350CE /* b2MotorJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2MotorJoint.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -402,7 +406,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80BB8A75141C3F4C00F1753A /* libBox2D.a in Frameworks */,
+				80BB8A75141C3F4C00F1753A /* libbox2d.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,7 +416,7 @@
 			files = (
 				80BB8A7B141C3FA700F1753A /* OpenGL.framework in Frameworks */,
 				80BB8A79141C3F9C00F1753A /* GLUT.framework in Frameworks */,
-				80BB8A76141C3F7600F1753A /* libBox2D.a in Frameworks */,
+				80BB8A76141C3F7600F1753A /* libbox2d.a in Frameworks */,
 				80BB8A77141C3F7600F1753A /* libGLUI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,6 +553,8 @@
 		80BB896D141C3E5900F1753A /* Joints */ = {
 			isa = PBXGroup;
 			children = (
+				EBF7F729163435FA00F350CE /* b2MotorJoint.cpp */,
+				EBF7F72A163435FA00F350CE /* b2MotorJoint.h */,
 				80BB896E141C3E5900F1753A /* b2DistanceJoint.cpp */,
 				80BB896F141C3E5900F1753A /* b2DistanceJoint.h */,
 				80BB8970141C3E5900F1753A /* b2FrictionJoint.cpp */,
@@ -735,7 +741,7 @@
 		80FF01D3141C3D980059E59D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				80FF01D2141C3D980059E59D /* libBox2D.a */,
+				80FF01D2141C3D980059E59D /* libbox2d.a */,
 				80BB8901141C3E1800F1753A /* libGLUI.a */,
 				80BB890A141C3E2700F1753A /* HelloWorld */,
 				80BB8918141C3E3600F1753A /* Testbed */,
@@ -809,6 +815,7 @@
 				80BB89DD141C3E5900F1753A /* b2WeldJoint.h in Headers */,
 				80BB89DF141C3E5900F1753A /* b2WheelJoint.h in Headers */,
 				80BB89E1141C3E5900F1753A /* b2Rope.h in Headers */,
+				EBF7F72C163435FA00F350CE /* b2MotorJoint.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -869,9 +876,9 @@
 			productReference = 80BB8918141C3E3600F1753A /* Testbed */;
 			productType = "com.apple.product-type.tool";
 		};
-		80FF01D1141C3D980059E59D /* Box2D */ = {
+		80FF01D1141C3D980059E59D /* box2d-osx */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 80FF01D6141C3D980059E59D /* Build configuration list for PBXNativeTarget "Box2D" */;
+			buildConfigurationList = 80FF01D6141C3D980059E59D /* Build configuration list for PBXNativeTarget "box2d-osx" */;
 			buildPhases = (
 				80FF01CE141C3D980059E59D /* Sources */,
 				80FF01CF141C3D980059E59D /* Frameworks */,
@@ -881,9 +888,9 @@
 			);
 			dependencies = (
 			);
-			name = Box2D;
+			name = "box2d-osx";
 			productName = Box2D;
-			productReference = 80FF01D2141C3D980059E59D /* libBox2D.a */;
+			productReference = 80FF01D2141C3D980059E59D /* libbox2d.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -891,6 +898,9 @@
 /* Begin PBXProject section */
 		80FF01C9141C3D980059E59D /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
 			buildConfigurationList = 80FF01CC141C3D980059E59D /* Build configuration list for PBXProject "Box2D" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -903,7 +913,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				80FF01D1141C3D980059E59D /* Box2D */,
+				80FF01D1141C3D980059E59D /* box2d-osx */,
 				80BB8900141C3E1800F1753A /* GLUI */,
 				80BB8909141C3E2600F1753A /* HelloWorld */,
 				80BB8917141C3E3600F1753A /* Testbed */,
@@ -1019,6 +1029,7 @@
 				80BB89DC141C3E5900F1753A /* b2WeldJoint.cpp in Sources */,
 				80BB89DE141C3E5900F1753A /* b2WheelJoint.cpp in Sources */,
 				80BB89E0141C3E5900F1753A /* b2Rope.cpp in Sources */,
+				EBF7F72B163435FA00F350CE /* b2MotorJoint.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1027,12 +1038,12 @@
 /* Begin PBXTargetDependency section */
 		80BB8A70141C3EA100F1753A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 80FF01D1141C3D980059E59D /* Box2D */;
+			target = 80FF01D1141C3D980059E59D /* box2d-osx */;
 			targetProxy = 80BB8A6F141C3EA100F1753A /* PBXContainerItemProxy */;
 		};
 		80BB8A72141C3EA800F1753A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 80FF01D1141C3D980059E59D /* Box2D */;
+			target = 80FF01D1141C3D980059E59D /* box2d-osx */;
 			targetProxy = 80BB8A71141C3EA800F1753A /* PBXContainerItemProxy */;
 		};
 		80BB8A74141C3EA800F1753A /* PBXTargetDependency */ = {
@@ -1046,6 +1057,7 @@
 		80BB8902141C3E1800F1753A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				GCC_WARN_UNUSED_VALUE = NO;
@@ -1057,6 +1069,7 @@
 		80BB8903141C3E1800F1753A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
 				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
 				GCC_WARN_UNUSED_VALUE = NO;
@@ -1068,6 +1081,7 @@
 		80BB8912141C3E2700F1753A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1075,6 +1089,7 @@
 		80BB8913141C3E2700F1753A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -1145,16 +1160,20 @@
 		80FF01D7141C3D980059E59D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = box2d;
 			};
 			name = Debug;
 		};
 		80FF01D8141C3D980059E59D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = box2d;
 			};
 			name = Release;
 		};
@@ -1197,7 +1216,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		80FF01D6141C3D980059E59D /* Build configuration list for PBXNativeTarget "Box2D" */ = {
+		80FF01D6141C3D980059E59D /* Build configuration list for PBXNativeTarget "box2d-osx" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				80FF01D7141C3D980059E59D /* Debug */,
